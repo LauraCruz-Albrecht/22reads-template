@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope">
+  <title>22 Reads</title>
+</head>
+
+<body>
+  
+  <h1>22 Reads</h1>
+  <h4 style="margin-top:5px">A quest to read 22 books in 2022</h4>
+
+  <div class="book_container" id="book_container_id"></div>
+  <!-- populate book_container with js -->
+  <script>
+    const read = [
+      'her-body-and-other-parties.jpeg'
+      ];
+    const candidates = [
+      'a-little-life.png',
+      'circe.jpeg',
+      'the-dictionary-of-obscure-sorrows.jpeg'
+      ];
+
+    const books = document.getElementById("book_container_id");
+    var n = 0;
+    for (const img of read) {
+      books.innerHTML += '<div class="box read"><img src="pics/' + img + '" class="image" />' +
+                         '<div class="text">#' + ++n + '</div></div>';
+    }
+    for (const img of candidates) {
+      books.innerHTML += '<div class="box"><img src="pics/' + img + '" class="image" />' +
+                         '<div class="text">#' + ++n + '</div></div>';
+    }
+    while (n < 22) {
+      books.innerHTML += '<div class="box"><div class="text">#' + ++n + '</div></div>';
+    }
+  </script> 
+  <!-- end populating book_container -->
+
+  <h1>2022 Reads (so far)</h1>
+  <p>Her Body and Other Parties (Carmen Maria Machado)</p>
+  <p>Title (Author) .. </p>
+
+  <h3>* * *</h3>
+
+  <h1>2021 Notable Reads</h1>
+  <p>The Song of Achilles (Madeline Miller)</p>
+
+  <h3>* * *</h3>
+</body>
